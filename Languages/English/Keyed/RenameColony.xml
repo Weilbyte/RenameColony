@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <RCNamePlayerFactionMessage>{0} thinks that the faction could use a fresh new name. What should it be?</RCNamePlayerFactionMessage>
+  <RCPlayerFactionNameIsInvalid>That faction name is invalid.</RCPlayerFactionNameIsInvalid>
+  
+  <RCPlayerFactionBaseNameIsInvalid>That community name is invalid, sorry bud.</RCPlayerFactionBaseNameIsInvalid>  
+  <RCNamePlayerFactionBaseMessage_NameFactionContinuation>Since you're at it, {0} also thinks that you should give this community a new name if you want to. </RCNamePlayerFactionBaseMessage_NameFactionContinuation>
+  <RCPlayerFactionAndBaseGainsName>Your faction is now known as {0}, and this community is now known as {1}.</RCPlayerFactionAndBaseGainsName>
+</LanguageData>
