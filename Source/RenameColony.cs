@@ -25,7 +25,7 @@ namespace RenameColony
                 if (worldView)
                 {
                     #if DEBUG
-                    Log.Message("femboy foxes are gay");
+                    Log.Message("dbug");
                     #endif
                     return;
                 }
@@ -34,7 +34,7 @@ namespace RenameColony
                     Settlement settlement = (Settlement)Find.CurrentMap.info.parent;
                     Find.WindowStack.Add(new Dialog_RenameColony(settlement));
                     #if DEBUG
-                    Log.Message("femboy foxes are gay");
+                    Log.Message("dbug");
                     #endif
                 }
             }
