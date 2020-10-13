@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System;
+using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
@@ -7,15 +8,21 @@ namespace RenameColony
     class Dialog_RenameColony : Dialog_GiveName
     {
         private Settlement settlement;
+        public string changeNameTo;
+        public string changeSecondNameTo;
+        public Settlement changingSettlement;
 
         public Dialog_RenameColony(Settlement settlement)
         {
             this.settlement = settlement;
+            changingSettlement = settlement;
             if (settlement.HasMap && settlement.Map.mapPawns.FreeColonistsSpawnedCount != 0)
             {
                 Pawn suggestingPawn = settlement.Map.mapPawns.FreeColonistsSpawned.RandomElement<Pawn>();
             }
             this.curName = Faction.OfPlayer.Name;
+            this.changeNameTo = curName;
+            this.changeSecondNameTo = settlement.Name;
             this.nameMessageKey = "RCNamePlayerFactionMessage";
             this.invalidNameMessageKey = "PlayerFactionNameIsInvalid";
             this.useSecondName = true;
@@ -44,13 +51,22 @@ namespace RenameColony
             return NamePlayerSettlementDialogUtility.IsValidName(s);
         }
 
+        public void NamedPublic(string s)
+        {
+            
+        }
+
         protected override void Named(string s)
         {
+            changeNameTo = s;
             NamePlayerFactionDialogUtility.Named(s);
         }
 
         protected override void NamedSecond(string s)
         {
+            changeSecondNameTo = s;
+            changingSettlement = this.settlement;
+            NamedPublic(s);
             NamePlayerSettlementDialogUtility.Named(this.settlement, s);
         }
     }
