@@ -28,6 +28,9 @@
       <HintPath>packages\Lib.Harmony.2.0.2\lib\net472\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="0MultiplayerAPI, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RimWorld.MultiplayerAPI.0.2.0\lib\net472\0MultiplayerAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>lib\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -46,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dialog_RenameColony.cs" />
+    <Compile Include="MultiplayerCompatability.cs" />
     <Compile Include="RenameColony.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
