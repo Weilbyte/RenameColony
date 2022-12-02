@@ -30,6 +30,8 @@ namespace RenameColony
             this.secondNameMessageKey = "RCNamePlayerFactionBaseMessage_NameFactionContinuation";
             this.invalidSecondNameMessageKey = "RCPlayerFactionBaseNameIsInvalid";
             this.gainedNameMessageKey = "RCPlayerFactionAndBaseGainsName";
+            this.nameGenerator = () => NameGenerator.GenerateName(Faction.OfPlayer.def.factionNameMaker, IsValidName);
+            this.secondNameGenerator = () => NameGenerator.GenerateName(Faction.OfPlayer.def.settlementNameMaker, IsValidSecondName);
         }
 
         public override void PostOpen()
